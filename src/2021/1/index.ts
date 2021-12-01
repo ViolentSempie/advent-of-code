@@ -22,7 +22,7 @@ export class Year2021Day1 extends Application implements App {
 
     async getInput(): Promise<Array<number>> {
         return new Promise((resolve, reject) => {
-            const filePath = path.join(__dirname, "../..", "inputs/2021/day1.data");
+            const filePath = path.join(__dirname, "../../..", "inputs/2021/day1.data");
             fs.readFile(filePath, "utf8", (error, data) => {
                 if (error) {
                     return reject(error);

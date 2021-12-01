@@ -6,6 +6,8 @@
     "author": "Sem Wong <sem@facilityapps.com>",
     "license": "MIT",
     "scripts": {
+        "build": "npx tsc",
+        "start": "node build/index.js",
         "start:dev": "nodemon"
     },
     "devDependencies": {
@@ -13,5 +15,9 @@
         "nodemon": "^2.0.15",
         "ts-node": "^10.4.0",
         "typescript": "^4.5.2"
+    },
+    "dependencies": {
+        "@types/yargs": "^17.0.7",
+        "yargs": "^17.3.0"
     }
 }
