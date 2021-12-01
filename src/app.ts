@@ -23,6 +23,10 @@ export class Application {
             regex: /\[green\]/g,
             value: "\u001b[32m"
         },
+        yellow: {
+            regex: /\[yellow\]/g,
+            value: "\u001b[33m"
+        },
         reset: {
             regex: /\[reset\]/g,
             value: "\u001b[0m"
