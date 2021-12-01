@@ -1,6 +1,5 @@
 import { App, Application } from "../../app";
-import fs from "fs";
-import path from "path";
+import { Utils } from "../../utils";
 
 export class Year2021Day1 extends Application implements App {
     async run(): Promise<void> {
@@ -21,15 +20,7 @@ export class Year2021Day1 extends Application implements App {
     }
 
     async getInput(): Promise<Array<number>> {
-        return new Promise((resolve, reject) => {
-            const filePath = path.join(__dirname, "../../..", "inputs/2021/day1.data");
-            fs.readFile(filePath, "utf8", (error, data) => {
-                if (error) {
-                    return reject(error);
-                }
-
-                return resolve(data.split(/\r?\n/).map(item => parseInt(item)));
-            });
-        });
+        const data = await Utils.getInput(2021, 1);
+        return data.split(/\r?\n/).map(item => parseInt(item));
     }
 }

@@ -10,3 +10,11 @@
 2. Run the app `yarn start`
 3. Check the manual for options `yarn start --help`
 4. You can also run the app with hot reload using `yarn start:dev`
+
+## Using input data
+To start using the app, you will need to add your input data
+1. Go to your inputs data folder
+2. Create a folder for the year you want to run
+3. add a file named {day}.data where {day} is the day number
+
+An example would be: `inputs/2021/1.data`

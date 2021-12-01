@@ -106,3 +106,5 @@ dist
 # typescript build
 build
 .vscode
+inputs/**
+!inputs/empty
