@@ -1,5 +1,7 @@
 export interface App {
     run(): Promise<void>;
+    part1(): Promise<void>;
+    part2(): Promise<void>;
 }
 
 interface colors {

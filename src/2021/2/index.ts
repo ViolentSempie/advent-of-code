@@ -10,7 +10,7 @@ export class Year2021Day2 extends Application implements App {
         await this.part2();
     }
 
-    async part1() {
+    async part1(): Promise<void> {
         let horizontal = 0;
         let depth = 0;
 
@@ -37,7 +37,7 @@ export class Year2021Day2 extends Application implements App {
         this.output(`position [yellow]${horizontal}[reset] x [yellow]${depth}[reset] = [green]${horizontal * depth}[reset]`);
     }
 
-    async part2() {
+    async part2(): Promise<void> {
         let horizontal = 0;
         let aim = 0;
         let depth = 0;

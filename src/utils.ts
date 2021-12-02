@@ -9,13 +9,8 @@ export class Utils {
                 "..",
                 `inputs/${year}/${day}.data`
             );
-            fs.readFile(filePath, "utf8", (error, data) => {
-                if (error) {
-                    return reject(error);
-                }
 
-                return resolve(data);
-            });
+            fs.readFile(filePath, "utf8", (error, data) => error ? reject(error) : resolve(data));
         });
     }
 }

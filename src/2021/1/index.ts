@@ -10,7 +10,7 @@ export class Year2021Day1 extends Application implements App {
         await this.part2();
     }
 
-    async part1() {
+    async part1(): Promise<void> {
         let lastInput = null;
         let increments = 0;
 
@@ -27,7 +27,7 @@ export class Year2021Day1 extends Application implements App {
         this.output(`depth increased [green]${increments}[reset] times`);
     }
 
-    async part2() {
+    async part2(): Promise<void> {
         const input = await this.getInput();
         const groups = this.getGroups(input);
 
