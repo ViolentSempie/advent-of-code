@@ -1,5 +1,5 @@
-import { App, Application } from "../../app";
-import { Utils } from "../../utils";
+import { App, Application } from "../app";
+import { Utils } from "../utils";
 
 export class Year2021Day1 extends Application implements App {
     async run(): Promise<void> {
