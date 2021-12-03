@@ -5,21 +5,22 @@
 2. Run `yarn install`
 3. Build the app by running `yarn build`
 
+## Importing input data
+1. First, get your session from the adventofcode.com website
+2. Copy the `.env.sample` to `.env`
+3. Change `AOC_SESSION` to your current session
+4. Run the command `yarn start data` or the shorthand `yarn data`
+
+this will import your data, it uses the default options for --year and --day
+
 ## How to run
 1. Build the app `yarn build`
-2. Run the app `yarn start`
+2. Run the app `yarn start run`
 3. Check the manual for options `yarn start --help`
-4. You can also run the app with hot reload using `yarn start:dev`
-
-## Using input data
-To start using the app, you will need to add your input data
-1. Go to your inputs data folder
-2. Create a folder for the year you want to run
-3. add a file named `{day}.data` where {day} is the day number
-
-An example would be: `inputs/2021/1.data`
 
 ## Progress
 
 ### Year 2021
 - Day 1 
+- Day 2
+- Day 3
