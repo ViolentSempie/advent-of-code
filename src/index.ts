@@ -1,16 +1,18 @@
 require("dotenv").config();
 
-import { Year2021Day1 } from "./2021/day1";
 import yargs from "yargs/yargs";
 import { Arguments } from "yargs";
 import { hideBin } from "yargs/helpers";
-import { Year2021Day2 } from "./2021/day2";
-import { Year2021Day3 } from "./2021/day3";
 
 import got from "got";
 import fs from "fs";
 import path from "path";
 import { Utils } from "./utils";
+
+import { Year2021Day1 } from "./2021/day1";
+import { Year2021Day2 } from "./2021/day2";
+import { Year2021Day3 } from "./2021/day3";
+import { Year2021Day4 } from "./2021/day4";
 
 const importData = async (argv: Arguments): Promise<void> => {
     if (typeof process.env.AOC_SESSION === "undefined") {
@@ -41,6 +43,7 @@ const runApp = (argv: Arguments<{ year: number, day: number }>) => {
             1: Year2021Day1,
             2: Year2021Day2,
             3: Year2021Day3,
+            4: Year2021Day4,
         }
     };
     
@@ -63,7 +66,7 @@ yargs(hideBin(process.argv))
         description: "Set the day to run",
         alias: "d",
         type: "number",
-        default: 3
+        default: 4
     })
     .command(
         "run",
