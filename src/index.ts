@@ -14,6 +14,7 @@ import { Year2021Day2 } from "./2021/day2";
 import { Year2021Day3 } from "./2021/day3";
 import { Year2021Day4 } from "./2021/day4";
 import { Year2021Day5 } from "./2021/day5";
+import { Year2021Day6 } from "./2021/day6";
 
 const importData = async (argv: Arguments): Promise<void> => {
     if (typeof process.env.AOC_SESSION === "undefined") {
@@ -46,6 +47,7 @@ const runApp = (argv: Arguments<{ year: number, day: number }>) => {
             3: Year2021Day3,
             4: Year2021Day4,
             5: Year2021Day5,
+            6: Year2021Day6,
         }
     };
     
@@ -68,7 +70,7 @@ yargs(hideBin(process.argv))
         description: "Set the day to run",
         alias: "d",
         type: "number",
-        default: 5
+        default: 6
     })
     .command(
         "run",
@@ -78,7 +80,7 @@ yargs(hideBin(process.argv))
             default: 2021
         }).positional("day", {
             describe: "Day to import data to",
-            default: 5
+            default: 6
         }),
         runApp
     )
@@ -90,7 +92,7 @@ yargs(hideBin(process.argv))
                 default: 2021
             }).positional("day", {
                 describe: "Day to import data to",
-                default: 5
+                default: 6
             }),
             importData
     )
